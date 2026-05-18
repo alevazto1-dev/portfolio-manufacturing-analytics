@@ -30,6 +30,9 @@ defectos, mantenimiento e inspecciones de calidad.
 - **SKU-AUTO-007 en M03 y M04** presenta Cpk crítico (0.64-0.65), 
   indicando proceso gravemente incapaz. M03 acumula OEE bajo 
   y Cpk crítico — requiere intervención inmediata.
+  - **Ningún producto alcanza Cpk ≥ 1.33** (estándar mínimo automotriz). 
+  La planta tiene un problema sistémico de variabilidad de proceso 
+  que va más allá del caso crítico de SKU-AUTO-007.
 ---
 
 ## 3. Análisis de causa raíz — Turno nocturno T03
