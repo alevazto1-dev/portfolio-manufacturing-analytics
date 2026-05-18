@@ -27,7 +27,9 @@ defectos, mantenimiento e inspecciones de calidad.
   0.90%–1.08% de operadores MASTER — diferencia de hasta 3.6x.
 - **OP012 Diego Morales (JR)** es el operador con peor desempeño 
   individual: 4.17% de scrap rate.
-
+- **SKU-AUTO-007 en M03 y M04** presenta Cpk crítico (0.64-0.65), 
+  indicando proceso gravemente incapaz. M03 acumula OEE bajo 
+  y Cpk crítico — requiere intervención inmediata.
 ---
 
 ## 3. Análisis de causa raíz — Turno nocturno T03
@@ -66,6 +68,10 @@ Con causa raíz no identificada en datos, se requiere investigación
 directa en planta: condiciones ambientales, procedimientos nocturnos 
 y nivel de supervisión.
 
+**R4. Intervención inmediata en M03 × SKU-AUTO-007**
+Cpk = 0.649 indica proceso gravemente incapaz. Revisar herramental,
+recalibrar la máquina y realizar análisis de causa raíz específico
+para esta combinación máquina-producto.
 ---
 
 ## 5. Próximos pasos
