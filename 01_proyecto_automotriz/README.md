@@ -42,7 +42,9 @@ su scrap rate y si su OEE es competitivo. El análisis responde:
 6. **Investigación de causa raíz** — método Ishikawa, 4 hipótesis probadas.
 7. **Cálculo de OEE** — desagregado por máquina y turno con corrección de rendimiento.
 8. **Visualizaciones** — tendencia mensual y comparación por máquina.
-
+9. **Análisis Cpk** — capacidad de proceso por producto y máquina.
+10. **SQL industrial** — 5 queries con JOINs, window functions y CTEs.
+11. **Dashboard Tableau** — visualización ejecutiva interactiva.
 ---
 
 ## Hallazgos principales
@@ -53,7 +55,10 @@ su scrap rate y si su OEE es competitivo. El análisis responde:
 - Operadores MASTER producen **3.6x menos scrap** que operadores JR.
 - La causa del scrap alto en T03 es **sistémica del turno** — 
   no atribuible a máquinas, operadores ni productos específicos.
-
+- **SKU-AUTO-007** presenta Cpk crítico (0.806) — proceso incapaz. 
+  En M03 y M04 el Cpk baja a 0.64-0.65.
+- **Ningún producto alcanza Cpk ≥ 1.33** — problema sistémico 
+  de variabilidad en toda la planta.
 ---
 
 ## Cómo correr el código
@@ -82,3 +87,22 @@ pip install -r requirements.txt
 ---
 
 ## Estructura del proyecto
+## Estructura del proyecto
+
+```
+01_proyecto_automotriz/
+├── data/
+│   └── raw/           dataset (descomprimir Automotriz_Portfolio_Data.zip aquí)
+├── notebooks/
+│   ├── 01_exploracion_inicial.ipynb    EDA, OEE, scrap, operadores
+│   ├── 02_carga_mysql.ipynb            carga a MySQL con SQLAlchemy
+│   └── 03_cpk_capacidad_proceso.ipynb  análisis Cpk por producto y máquina
+├── sql/
+│   └── queries_industriales.sql        5 queries: OEE, ranking, CTE, LAG
+├── dashboards/
+│   └── dashboard_automotriz.twb        dashboard Tableau
+├── reports/
+│   ├── reporte_ejecutivo.md            análisis en lenguaje de negocio
+│   └── dashboard_screenshot.png        captura del dashboard
+└── README.md
+```
